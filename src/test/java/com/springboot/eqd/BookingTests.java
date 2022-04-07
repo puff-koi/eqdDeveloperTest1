@@ -32,7 +32,6 @@ public class BookingTests {
 	public void bookingtest() throws ParseException {
 		try {
 			JSONObject json = JsonUtils.readJsonFromClassPath("/json/test.json", JSONObject.class);
-
 			JSONArray array = json.getJSONArray("guest");
 			for (int i = 0; i < array.size(); i++) {
 				bookService.storeBooking(array.getObject(i, BookingDto.class));
